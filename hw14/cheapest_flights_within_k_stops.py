@@ -20,5 +20,5 @@ class Solution:
                     heapq.heappush(heap, (dist + cost, neighbour, steps + 1))
                 elif steps < current_stops[neighbour]:
                     heapq.heappush(heap, (dist + cost, neighbour, steps + 1))
+                current_stops[neighbour] = steps
         return -1
-        
